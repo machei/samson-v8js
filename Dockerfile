@@ -16,7 +16,7 @@ RUN export GYPFLAGS="-Dv8_use_external_startup_data=0"
 RUN export GYPFLAGS="${GYPFLAGS} -Dlinux_use_bundled_gold=0"
 
 # compile v8
-RUN cd /tmp/v8 && make native library=shared snapshot=on -j8
+RUN cd /tmp/v8 && make native library=shared snapshot=off -j4
 
 # install v8
 #RUN mkdir -p /usr/local/lib
